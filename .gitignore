@@ -1,0 +1,1 @@
+.idea/echo target/echo *.imlecho .envecho logs/
