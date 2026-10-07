@@ -42,6 +42,7 @@ public class UserService {
 
         return toResponse(user);
     }
+
     private UserResponse toResponse(User user) {
         return new UserResponse(
                 user.getId(),
