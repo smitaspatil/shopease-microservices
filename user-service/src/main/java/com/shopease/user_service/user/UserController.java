@@ -1,12 +1,9 @@
 package com.shopease.user_service.user;
-
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
-
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
-
 @RestController
 @RequestMapping("/users")
 public class UserController {

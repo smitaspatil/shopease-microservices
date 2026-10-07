@@ -4,10 +4,12 @@ spring:
 
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
+      server:
+        webmvc:
+          discovery:
+            locator:
+              enabled: true
+              lower-case-service-id: true
 
 server:
   port: 8080
@@ -22,7 +24,6 @@ eureka:
 management:
   endpoint:
     gateway:
-      enabled: true
       access: read-only
 
   endpoints:

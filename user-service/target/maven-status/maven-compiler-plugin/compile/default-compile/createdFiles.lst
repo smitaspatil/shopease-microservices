@@ -1,0 +1,7 @@
+com\shopease\user_service\user\UserService.class
+com\shopease\user_service\user\UserResponse.class
+com\shopease\user_service\UserServiceApplication.class
+com\shopease\user_service\user\CreateUserRequest.class
+com\shopease\user_service\user\User.class
+com\shopease\user_service\user\UserRepository.class
+com\shopease\user_service\user\UserController.class

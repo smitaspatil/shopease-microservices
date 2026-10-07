@@ -1,7 +1,6 @@
 package com.shopease.user_service.user;
 
 import jakarta.persistence.*;
-
 import java.time.Instant;
 import java.util.UUID;
 
@@ -86,9 +85,4 @@ public class User {
     public Instant getCreatedAt() {
         return createdAt;
     }
-
-    public void setCreatedAt(Instant createdAt) {
-        this.createdAt = createdAt;
-    }
 }
-
