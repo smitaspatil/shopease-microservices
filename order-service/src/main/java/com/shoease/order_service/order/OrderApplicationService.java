@@ -90,6 +90,8 @@ public class OrderApplicationService {
     }
 
     public List<OrderResponse> findByUserId(UUID userId) {
+        userClient.findById(userId);
+
         return orderRepository.findByUserId(userId)
                 .stream()
                 .map(this::toResponse)
