@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: order-service
+
+  cloud:
+    openfeign:
+      httpclient:
+        hc5:
+          enabled: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order_db
+    username: postgres
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8083
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+logging:
+  level:
+    com.shopease.orderservice.client.UserClient: DEBUG
+    com.shopease.orderservice.client.ProductClient: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
