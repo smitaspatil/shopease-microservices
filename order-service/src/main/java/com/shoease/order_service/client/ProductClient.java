@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@FeignClient(name = "product-service")
+@FeignClient(
+        name = "product-service",
+        fallbackFactory = ProductClientFallbackFactory.class
+)
 public interface ProductClient {
 
     @GetMapping("/products/{id}")
